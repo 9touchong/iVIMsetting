@@ -33,11 +33,24 @@ set ruler
 " Search results high light
 set hlsearch
 
+"让insert模式下backspace可以使用,加上eol可以退格到上一行
+"set backspace=indent,eol,start
+set backspace=indent,start
+
+"注释换行 不自动添加注释
+"set formatoptions-=r
+"set fo-=cro
+set paste
+
 " web相关 html js and so on
 let g:html_indent_tags = 'li\|p'
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-autocmd Syntax javascript set syntax=jquery " JQuery syntax support
+"autocmd Syntax javascript set syntax=jquery " JQuery syntax support
+
+" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
