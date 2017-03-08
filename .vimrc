@@ -12,6 +12,13 @@ filetype plugin indent on
 ">au WinEnter * set cursorline cursorcolumn
 ">set cursorline cursorcolumn
 
+"tab四空格
+set ts=4
+set expandtab
+set autoindent
+"文件编码
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
+
 " Javascript syntax hightlight 无此项就没有花花绿绿的颜色
 syntax enable
 
