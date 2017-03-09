@@ -18,6 +18,21 @@ set expandtab
 set autoindent
 "文件编码
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
+"windows下编码设置 解决内容或菜单等中文乱码
+set fenc=chinese
+
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+	set fileencoding=chinese
+else
+	set fileencoding=utf-8
+endif
+
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+language messages zh_CN.utf-8
 
 " Javascript syntax hightlight 无此项就没有花花绿绿的颜色
 syntax enable
